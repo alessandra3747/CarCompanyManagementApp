@@ -1,0 +1,29 @@
+TASK DESCRIPTION
+
+Write an application simulating a simplified process of ordering/paying in a certain car rental company that 
+rents cars by the kilometers.
+
+The company offers various types of cars, each with its own make/model and type 
+(e.g., passenger, delivery, vintage, etc.). Cars can be ordered for a specified distance 
+(not exceeding a given limit) measured in kilometers. Rental prices are listed in a price list. 
+The price list can be modified at any time.
+
+Customers, upon registration, receive identifiers and declare the amount of money they want to spend on 
+rentals. Customers may (but do not have to) have a subscription with the company. Customers choose cars and 
+place them on their so-called wish list. Then, possibly after some time, to finalize the order, they transfer 
+the cars to the cart (after clearing it first) and pay for its contents. Each customer can have only one 
+wish list and one cart. Customers can pay by card or bank transfer. After payment, the customer has the option
+ to return (only from the last transaction) part or all of the unused kilometers.
+
+Important notes:
+- There may be cars that do not have a price in the price list; in such cases, when transferring from the 
+  wish list to the cart, they are not removed from the wish list and do not enter the cart.
+- Some cars have different prices depending on the number of kilometers ordered.
+- If the customer does not have enough money for the entire cart's contents, they may be able to pay for part
+  of the cart, provided that the paid amount (for a given car) is a multiple of the car's price per kilometer 
+  (according to the price list). In such a case, the application will decide which cars/kilometers to pay for.
+- When paying by credit card, the customer will pay an additional 1% fee.
+- When returning cars/kilometers from the last transaction, the application should refund the customer the 
+  appropriate amount of money, taking into account the actual kilometers not returned 
+  (according to the price list). The fee is non-refundable.
+- Defining an appropriate `toString()` method in certain classes is mandatory.

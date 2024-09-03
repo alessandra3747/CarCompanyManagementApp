@@ -1,0 +1,28 @@
+OPIS ZADANIA
+
+Napisać aplikację symulującą uproszczony proces zamawiania/płacenia w pewnej firmie wynajmującej 
+samochody na kilometry.
+
+Firma oferuje różne typy samochodów, każdy samochód ma swoją markę/model oraz typ (np. osobowy, dostawczy, 
+zabytkowy, ...). Samochody mogą być zamawiane na daną odległość (tzn. nie dłuższą niż) mierzoną w kilometrach. 
+Ceny za wynajem znajdują się w cenniku. Cennik można modyfikować w dowolnym momencie.
+
+Klienci po rejestracji otrzymują identyfikatory oraz deklarują kwotę pieniędzy, którą chcą wydać na wynajem. 
+Klienci mogą (ale nie muszą) posiadać abonament w firmie. Klienci wybierają samochody i umieszczają je na 
+swojej tzw. liście życzeń. Następnie, być może po jakimś czasie, w celu finalizacji zamówienia przepakowują 
+samochody do koszyka (po uprzednim wyczyszczeniu) i zapłacą za jego zawartość. Każdy klient może mieć 
+tylko 1 listę życzeń i 1 koszyk. Klienci mogą płacić kartą lub przelewem bankowym. Po zapłaceniu, klient ma 
+możliwość dokonania zwrotu (tylko z ostatniej transakcji) części lub całej ilości niewykorzystanych kilometrów.
+
+Ważne uwagi:
+- Być może są samochody niemające ceny w cenniku, wtedy przy przepakowaniu z listy życzeń do koszyka nie są one
+  usuwane z listy życzeń i nie trafią do koszyka.
+- Niektóre samochody posiadają różne ceny w zależności od ilości zamówionych kilometrów.
+- Jeśli klient nie ma wystarczającej ilości pieniędzy na całą zawartość koszyka to, zależy od opcji, może 
+  zapłacić za część koszyka o ile zapłacona kwota (za dany samochód) jest wielokrotnością ceny tego samochodu 
+  za 1 km (zgodnie z cennikiem), w takim przypadku o wyborze samochodów/kilometrów do zapłacenia zadecyduje 
+  aplikacja.
+- Przy płaceniu kartą płatniczą klient zapłaci dodatkowo 1% prowizji.
+- Przy zwrocie samochodów/kilometrów z ostatniej transakcji, aplikacja powinna zwrócić klientowi właściwą 
+  ilość środków uwzględniając faktycznie niezwrócone kilometry (zgodnie z cennikiem). Nie ma zwrotu prowizji.
+- Zdefiniowanie odpowiedniej metody toString() w niektórych klasach jest obowiązkowe.
